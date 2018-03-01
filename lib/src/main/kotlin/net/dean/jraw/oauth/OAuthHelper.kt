@@ -57,6 +57,10 @@ object OAuthHelper {
             throw IllegalArgumentException("This function is for script apps only")
 
         try {
+
+            System.out.println("Client ID: " + creds.clientId)
+            System.out.println("Client Secret: " + creds.clientSecret)
+
              return http.execute(HttpRequest.Builder()
                 .post(mapOf(
                     "grant_type" to "password",
